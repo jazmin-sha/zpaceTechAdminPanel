@@ -60,7 +60,7 @@
             <span>{{ menuitem.name | translate }}</span>
             <span fxFlex></span>
             <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
-            <mat-icon class="dd-icon">keyboard_arrow_down</mat-icon>
+            <!-- <mat-icon class="dd-icon">keyboard_arrow_down</mat-icon> -->
         </a>
 
         <mat-nav-list class="sub-item" *ngIf="menuitem.type === 'sub'">
@@ -78,7 +78,7 @@
                     [ngClass]="j==itemSelect[i]? 'selected' : ''">
                     <span>{{ childitem.name | translate }}</span>
                     <span fxFlex></span>
-                    <mat-icon class="dd-icon">keyboard_arrow_down</mat-icon>
+                    <!-- <mat-icon class="dd-icon">keyboard_arrow_down</mat-icon> -->
                 </a>
 
                 <mat-nav-list class="child-sub-item" *ngIf="childitem.type === 'subchild'">

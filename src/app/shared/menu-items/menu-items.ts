@@ -41,11 +41,61 @@ const MENUITEMS = [
         state: 'dashboards',
         name: 'Dashboards',
         type: 'sub',
-        icon: 'av_timer',
-        children: [
-            { state: 'dashboard1', name: 'Dashboard 1', type: 'link' },
-            { state: 'dashboard2', name: 'Dashboard 2', type: 'link' }
-        ]
+        icon: 'apps',
+        // icon: 'av_timer',
+        // children: [
+        //     { state: 'dashboard1', name: 'Dashboard 1', type: 'link' },
+        //     { state: 'dashboard2', name: 'Dashboard 2', type: 'link' }
+        // ]
+    },
+    {
+        state: 'material',
+        name: 'Products',
+        type: 'sub',
+        icon: 'bubble_chart',
+        // badge: [{ type: 'red', value: '17' }],
+    },
+    {
+        state: 'material',
+        name: 'Customers',
+        type: 'sub',
+        icon: 'bubble_chart',
+        // badge: [{ type: 'red', value: '17' }],
+    },
+    {
+        state: 'material',
+        name: 'Inventory',
+        type: 'sub',
+        icon: 'bubble_chart',
+        // badge: [{ type: 'red', value: '17' }],
+    },
+    {
+        state: 'material',
+        name: 'Orders',
+        type: 'sub',
+        icon: 'bubble_chart',
+        // badge: [{ type: 'red', value: '17' }],
+    },
+    {
+        state: 'material',
+        name: 'Sales',
+        type: 'sub',
+        icon: 'bubble_chart',
+        // badge: [{ type: 'red', value: '17' }],
+    },
+    {
+        state: 'material',
+        name: 'Delivery',
+        type: 'sub',
+        icon: 'bubble_chart',
+        // badge: [{ type: 'red', value: '17' }],
+    },
+    {
+        state: 'material',
+        name: 'Vendor',
+        type: 'sub',
+        icon: 'bubble_chart',
+        // badge: [{ type: 'red', value: '17' }],
     },
     {
         state: 'apps',
@@ -102,6 +152,7 @@ const MENUITEMS = [
             { state: 'slide-toggle', name: 'Slide Toggle', type: 'link' }
         ]
     },
+
 
     {
         state: 'tree',
