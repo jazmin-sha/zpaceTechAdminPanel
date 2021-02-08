@@ -26,6 +26,7 @@ export const AppRoutes: Routes = [
                 path: 'product',
                 loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
             },
+            
             // {
             //     path: 'material',
             //     loadChildren: () => import('./material-component/material.module').then(m => m.MaterialComponentsModule)
