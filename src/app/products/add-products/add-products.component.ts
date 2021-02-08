@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import {
   FormBuilder,
   FormGroup,
@@ -13,10 +14,11 @@ import {
 })
 export class AddProductsComponent implements OnInit {
 
-  
+  'imageSrc': string;
+    
   public form: FormGroup = Object.create(null);
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
    
