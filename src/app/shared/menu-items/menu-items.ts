@@ -38,9 +38,9 @@ const MENUITEMS = [
         icon: 'av_timer'
     }, 
     {
-        state: 'dashboard1',
+        state: 'dashboards',
         name: 'Dashboards',
-        type: 'sub',
+        type: 'link',
         icon: 'apps',
         // icon: 'av_timer',
         // children: [
@@ -49,9 +49,9 @@ const MENUITEMS = [
         // ]
     },
     {
-        state: 'material',
+        state: 'product',
         name: 'Products',
-        type: 'sub',
+        type: 'link',
         icon: 'all_out',
         // badge: [{ type: 'red', value: '17' }],
     },

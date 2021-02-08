@@ -5,11 +5,11 @@
             <div fxLayout="row wrap">
                 <div class="p-10" fxFlex.gt-sm="60" fxFlex.gt-xs="60" fxFlex="100">
                     <mat-form-field>
-                        <input matInput placeholder="First name" >
+                        <input matInput placeholder="Product name" >
                     </mat-form-field>
                 </div>
                 <div class="p-10 mb-2" fxFlex.gt-sm="40" fxFlex.gt-xs="40" fxFlex="100">
-                      <input class="form-control b-b" placeholder="file" type="file" (change)="onSelect($event)" multiple><br>
+                      <input class="matInput  b-b" placeholder="file" type="file" (change)="onSelect($event)" multiple><br>
                       <img [src]="url" *ngFor='let url of urls' height="100" alt="">
                 </div>
                 <div class="p-10" fxFlex.gt-sm="60" fxFlex.gt-xs="60" fxFlex="100">
