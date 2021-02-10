@@ -129,7 +129,7 @@ export class EmployeeComponent implements OnInit, AfterViewInit {
 
     @ViewChild(MatTable, { static: true }) table: MatTable<any> = Object.create(null);
     searchText: any;
-    displayedColumns: string[] = ['#', 'customer_name', 'email_id','phone_number', 'cust_address', 'delivery_status', 'payment_status'];
+    displayedColumns: string[] = ['#', 'name', 'email', 'mobile', 'date of joining', 'salary', 'projects', 'action'];
     dataSource = new MatTableDataSource(employees);
     @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator = Object.create(null);
 

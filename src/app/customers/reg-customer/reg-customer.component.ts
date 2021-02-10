@@ -36,34 +36,37 @@ export class RegCustomerComponent implements OnInit , AfterViewInit{
 
   openDialog(action: string, obj: any): void {
       obj.action = action;
-      const dialogRef = this.dialog.open(EmployeeDialogContent, {
+      const dialogRef = this.dialog.open(CustomerDialogContent, {
           data: obj
       });
+      console.log(obj);
+      
       dialogRef.afterClosed().subscribe(result => {
-          if (result.event === 'Add') {
-              this.addRowData(result.data);
-          } else if (result.event === 'Update') {
+          if (result.event === 'Update') {
               this.updateRowData(result.data);
           } else if (result.event === 'Delete') {
               this.deleteRowData(result.data);
           }
       });
   }
+//   if (result.event === 'Add') {
+//     this.addRowData(result.data);
+// } else
 
-  // tslint:disable-next-line - Disables all
-  addRowData(row_obj: Customers): void {
-      this.dataSource.data.push({
-          id: CusomerList.length + 1,
-          customer_name: row_obj.customer_name,
-          cust_address: row_obj.cust_address,
-          email_id: row_obj.email_id,
-          phone_number: row_obj.phone_number,
-          delivery_status:row_obj.delivery_status,
-          payment_status: row_obj.payment_status
-      });
-      this.dialog.open(AddCustomerComponent);
-      this.table.renderRows();
-  }
+//   // tslint:disable-next-line - Disables all
+//   addRowData(row_obj: Customers): void {
+//       this.dataSource.data.push({
+//           id: CusomerList.length + 1,
+//           customer_name: row_obj.customer_name,
+//           cust_address: row_obj.cust_address,
+//           email_id: row_obj.email_id,
+//           phone_number: row_obj.phone_number,
+//           delivery_status:row_obj.delivery_status,
+//           payment_status: row_obj.payment_status
+//       });
+//       this.dialog.open(AddCustomerComponent);
+//       this.table.renderRows();
+//   }
 
   // tslint:disable-next-line - Disables all
   updateRowData(row_obj: Customers): boolean | any {
@@ -95,7 +98,7 @@ export class RegCustomerComponent implements OnInit , AfterViewInit{
 //   templateUrl: 'dialog-content.html',
 // })
 // tslint:disable-next-line: component-class-suffix
-export class EmployeeDialogContent {
+export class CustomerDialogContent {
   action: string;
   // tslint:disable-next-line - Disables all
   local_data: any;
@@ -104,17 +107,17 @@ export class EmployeeDialogContent {
 
   constructor(
       public datePipe: DatePipe,
-      public dialogRef: MatDialogRef<EmployeeDialogContent>,
+      public dialogRef: MatDialogRef<CustomerDialogContent>,
       // @Optional() is used to prevent error if no data is passed
       @Optional() @Inject(MAT_DIALOG_DATA) public data: Customers) {
       this.local_data = { ...data };
       this.action = this.local_data.action;
       if (this.local_data.DateOfJoining !== undefined) {
-          this.joiningDate = this.datePipe.transform(new Date(this.local_data.DateOfJoining), 'yyyy-MM-dd');
-      }
-      if (this.local_data.imagePath === undefined) {
-          this.local_data.imagePath = 'assets/images/users/default.png';
-      }
+        this.joiningDate = this.datePipe.transform(new Date(this.local_data.DateOfJoining), 'yyyy-MM-dd');
+    }
+    if (this.local_data.imagePath === undefined) {
+        this.local_data.imagePath = 'assets/images/users/default.png';
+    }
   }
 
   doAction(): void {

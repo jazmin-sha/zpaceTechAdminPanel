@@ -20,7 +20,8 @@ import { AddDialogueComponent } from './add-dialogue/add-dialogue.component';
   declarations: [
     AddCustomerComponent,
      RegCustomerComponent, 
-     CustomerMainComponent, AddDialogueComponent
+     CustomerMainComponent,
+      AddDialogueComponent
     ],
   imports: [
     CommonModule,
